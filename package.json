@@ -38,9 +38,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon app/index.js",
-    "seed": "node app/seed/index.js",
-    "start-app": "npm run server && npm run client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "first_deploy": " concurrently \"npm install\" \"node app/seed/index.js\"",
+    "start-app-first": "concurrently \"npm run first_deploy\" \"npm run server\" \"npm run client\"",
+    "start-app": "concurrently \"npm run server\" \"npm run client\""
   },
   "proxy": "http://localhost:5000/api/",
   "eslintConfig": {

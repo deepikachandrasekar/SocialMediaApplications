@@ -22,7 +22,7 @@ CREATE TABLE `lecturer` (
   `lecturer_name` varchar(20) NOT NULL,
   `course_id` varchar(50) NOT NULL,
   `lecturer_email` varchar(30) NOT NULL,
-  `status` varchar(30) NOT NULL
+  `status` varchar(30) NOT NULL,
   PRIMARY KEY (`staff_id`)
 );
 
@@ -136,7 +136,7 @@ CREATE TABLE `student` (
   `course_id` int(6) NOT NULL,
   `password` BLOB,
   `email` varchar(120) NOT NULL,
-  `profile_picture` TEXT NOT NULL
+  `profile_picture` TEXT NOT NULL,
   PRIMARY KEY (`student_id`)
 );
 

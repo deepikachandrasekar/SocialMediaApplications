@@ -68,7 +68,7 @@ class Api {
     const controllerHelper = new ControllerHelper(res);
     try {
       var result = []
-      connection.query(`SELECT student.student_id, student.name as student_name  ,student.email,course.course_id,course.name  as course_name FROM student INNER  JOIN course  ON course.course_id = student.course_id where student.email='${req.body.email}' and student.password = AES_ENCRYPT('${req.body.password}','key_tud_password_encrypt');`, function (error, results, fields) {
+      connection.query(`SELECT student.student_id, student.name as student_name  ,student.email,course.course_id,course.name  as course_name,student.profile_picture FROM student INNER  JOIN course  ON course.course_id = student.course_id where student.email='${req.body.email}' and student.password = AES_ENCRYPT('${req.body.password}','key_tud_password_encrypt');`, function (error, results, fields) {
         if (error) console.log(error);
         if (results.length === 0) {
           controllerHelper.sendResponse({
@@ -83,6 +83,7 @@ class Api {
               student_id: value.student_id,
               name: value.student_name,
               email: value.email,
+              profile_picture: value.profile_picture,
               course_name: value.course_name,
               course_id: value.course_id
             };
