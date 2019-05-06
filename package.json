@@ -12,18 +12,37 @@
     "react-dom": "^16.8.6",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "async-waterfall": "^0.1.5",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1",
+    "mysql-import": "^2.0.2",
+    "nodemon": "^1.19.0",
+    "promise-mysql": "^3.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "typescript": "^3.4.5",
+    "which": "^1.3.1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dpikachan07/SocialMediaApplications.git"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "client": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon app/index.js",
+    "seed": "node app/seed/index.js",
+    "start-app": "npm run server && npm run client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "proxy": "http://localhost:5000/api/",
   "eslintConfig": {
     "extends": "react-app"
   },

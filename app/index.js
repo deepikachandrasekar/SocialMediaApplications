@@ -7,21 +7,20 @@ const Routes = require('./routes');
 
 const app = express();
 const server = http.createServer(app);
-
+const port = 5000;
 server.timeout = 0; // set server timeout to infinity.
 
-
+// support parsing of application/json type post data
+app.use(bodyParser.json());
+//support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({
-  extended: false,
+  extended: true
 }));
-app.use(express.static(path.resolve(__dirname, '../public/')));
-app.get('/', (res, req) => res.sendFile("../public/index.html"));
-
 app.use('/api', new Routes());
 
-server.listen(3000, (err) => {
+server.listen(port, (err) => {
   if (err) console.log('Error while starting server!!', err);
-  else console.log('Server started and listening on Port:', 3000);
+  else console.log('Server started and listening on Port:', port);
 });
 
 process.on('unhandledRejection', (reason) => {
