@@ -5,7 +5,7 @@ var db = require('promise-mysql');
 const importer = mysql_import.config({
   host: mysqlConfig.host,
   user: mysqlConfig.username,
-  port:mysqlConfig.port,
+  port: mysqlConfig.port,
   password: mysqlConfig.password,
   database: mysqlConfig.database,
   onerror: err => console.log(err.message)
@@ -15,7 +15,7 @@ var connection;
 db.createConnection({
   host: mysqlConfig.host,
   user: mysqlConfig.username,
-  port:mysqlConfig.port,
+  port: mysqlConfig.port,
   password: mysqlConfig.password,
   database: 'mysql'
 }).then(function (conn) {

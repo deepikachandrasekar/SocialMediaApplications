@@ -18,9 +18,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', function(req, res, next) {
+app.get('/', function (req, res, next) {
   //Path to your main file
-  res.status(200).sendFile(path.join(__dirname,'../public/index.html'));
+  res.status(200).sendFile(path.join(__dirname, '../public/index.html'));
 });
 app.use('/api', new Routes());
 

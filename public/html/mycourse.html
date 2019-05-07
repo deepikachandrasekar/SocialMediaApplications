@@ -1,56 +1,54 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
-             <div class="modules-page">
-<h4> Modules </h4>
-<div>
-<div class="ui-card">
-<div class="image">
-<img ng-src="{{globals.currentUser.profile_picture}}" width="250" height="250"/>
-</div>
-<!--User profile-->
-<div class="content">
-  <br>
-<a class="header">{{globals.currentUser.name}}</a>
-<div class="meta">
-  <br>
+  <div class="row">
+    <div class="col">
+      <div class="modules-page">
+        <h4> Modules </h4>
+        <div>
+          <div class="ui-card">
+            <div class="image">
+              <img ng-src="{{globals.currentUser.profile_picture}}" width="250" height="250" />
+            </div>
+            <!--User profile-->
+            <div class="content">
+              <br>
+              <a class="header">{{globals.currentUser.name}}</a>
+              <div class="meta">
+                <br>
 
-<span class="date">{{globals.currentUser.course_name}}</span>
-</div>
-</div>
-</div>
-</div>
-<!--List of modules based on user profile-->
-<div class="table-responsive modules-list">
+                <span class="date">{{globals.currentUser.course_name}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--List of modules based on user profile-->
+        <div class="table-responsive modules-list">
 
-<table id="modules" align="center">
-    <tr>
-        <td>Code</td>
-        <td>Module</td>
-        <td>Credits</td>
-        <td>Location</td>
-        <td>Website</td>
+          <table id="modules" align="center">
+            <tr>
+              <td>Code</td>
+              <td>Module</td>
+              <td>Credits</td>
+              <td>Location</td>
+              <td>Website</td>
 
-    </tr>
-    <tr ng-repeat="x in modulesData">
-        <td>{{x.module_id}}</td>
-        <td>{{x.name}}</td>
-        <td>{{x.credits}}</td>
-        <td>{{x.location}}</td>
-        <td>{{x.website}}</td>
-    </tr>
-</table>
-</div>
+            </tr>
+            <tr ng-repeat="x in modulesData">
+              <td>{{x.module_id}}</td>
+              <td>{{x.name}}</td>
+              <td>{{x.credits}}</td>
+              <td>{{x.location}}</td>
+              <td>{{x.website}}</td>
+            </tr>
+          </table>
+        </div>
 
-</div>
+      </div>
 
-</div>
     </div>
+  </div>
 </div>
 <style>
-
-img {
-  border-radius: 50%;
-}
-
+  img {
+    border-radius: 50%;
+  }
 </style>
