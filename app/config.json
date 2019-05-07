@@ -1,7 +1,7 @@
 {
   "mysql": {
     "host": "localhost",
-    "port": "3389",
+    "port": "8889",
     "username": "root",
     "password": "password",
     "database": "deepika_college_data"
