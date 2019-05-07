@@ -10,15 +10,18 @@
 </div>
 <!--User profile-->
 <div class="content">
+  <br>
 <a class="header">{{globals.currentUser.name}}</a>
 <div class="meta">
+  <br>
+
 <span class="date">{{globals.currentUser.course_name}}</span>
 </div>
 </div>
 </div>
 </div>
 <!--List of modules based on user profile-->
-<div class="modules-list">
+<div class="table-responsive modules-list">
 
 <table id="modules" align="center">
     <tr>
@@ -27,7 +30,6 @@
         <td>Credits</td>
         <td>Location</td>
         <td>Website</td>
-        <td>Due Date</td>
 
     </tr>
     <tr ng-repeat="x in modulesData">
@@ -36,7 +38,6 @@
         <td>{{x.credits}}</td>
         <td>{{x.location}}</td>
         <td>{{x.website}}</td>
-        <td>{{x.due_date | date:'dd-M-yyyy' }}</td>
     </tr>
 </table>
 </div>
@@ -46,3 +47,10 @@
 </div>
     </div>
 </div>
+<style>
+
+img {
+  border-radius: 50%;
+}
+
+</style>

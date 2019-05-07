@@ -8,6 +8,8 @@ class General extends Base {
     this.post('/timetable', ApiController.timetable);
     this.post('/login', ApiController.login);
     this.post('/modules', ApiController.modules);
+    this.post('/getpic', ApiController.getPic);
+
   }
 }
 

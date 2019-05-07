@@ -1,11 +1,11 @@
 
-/* 
+/*
     Created on : Mar 26, 2019, 9:24:35 PM
     Author     : deepikachandrasekar
 */
 body{
 	margin:0;
-	
+
 	font:600 16px/18px 'Helvetica',sans-serif;
 }
 /*Styling of the navigation menu bar*/
@@ -26,7 +26,7 @@ body{
 #modules{
     border: 2px solid #ddd;
     border-collapse: collapse;
-    width: 100%; 
+    width: 100%;
 }
 
 #modules  td, #modules th {
@@ -47,7 +47,7 @@ body{
 }
 /*Styling of the image in the user profile page and the icon in the home page*/
 img{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .logo{

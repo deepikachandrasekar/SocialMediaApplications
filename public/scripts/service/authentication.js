@@ -30,6 +30,28 @@ angular.module('Authentication')
               });
         };
 
+        service.GetPic = function (email,callback) {
+              $http({
+                  url: 'http://localhost:3000/api/getpic',
+                  method: "POST",
+                  data: { 'email' : email}
+              })
+              .then(function(response) {
+                console.log(response.data.result)
+                   if(response.data.result =='Incorrect Username or password') {
+                      response.message = response.data.result;
+                   }else{
+                     var postData = response.data.result[0]
+                     var response = { "success": {"name": postData.name, "profile_picture":postData.profile_picture} };
+                   }
+                   callback(response);
+                  },
+              function(response) { // optional
+                      // failed
+              });
+        };
+
+
         service.SetCredentials = function (userData) {
             var authdata = Base64.encode(userData.email + ':' + userData.student_id);
 

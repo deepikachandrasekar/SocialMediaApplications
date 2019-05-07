@@ -107,6 +107,44 @@ class Api {
     }
   }
 
+  static async getPic(req, res) {
+    const controllerHelper = new ControllerHelper(res);
+    try {
+      var result = []
+      connection.query(`SELECT  student.name, student.profile_picture FROM student where student.email='${req.body.email}'`, function (error, results, fields) {
+        if (error) console.log(error);
+        if (results.length === 0) {
+          controllerHelper.sendResponse({
+            code: 200,
+            result: {
+              result: "Incorrect Username or password"
+            }
+          });
+        } else {
+          results.forEach((value, index, array) => {
+            var tableVal = {
+              name: value.name,
+              profile_picture: value.profile_picture
+            };
+            result.push(tableVal);
+            if (index === array.length - 1) {
+              controllerHelper.sendResponse({
+                code: 200,
+                result: {
+                  result,
+                },
+              });
+            }
+          });
+        }
+      });
+    } catch (err) {
+      controllerHelper.sendErrorResponse({
+        message: err,
+      });
+    }
+  }
+
 
   static async modules(req, res) {
     const controllerHelper = new ControllerHelper(res);

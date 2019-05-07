@@ -15,7 +15,7 @@
 </div>
 </div>
 <!--List of modules based on user profile-->
-<div class="modules-list">
+<div class="modules-list table-responsive">
 <table id="modules" align="center">
     <tr>
         <td>Module Name</td>
@@ -32,17 +32,45 @@
         <td>{{x.day}}</td>
         <td>{{x.time}}</td>
         <td>{{x.location}}</td>
-        <!-- <td>{{x.location}}</td> -->
-
-          <td>
+        <td ng-if="x.location == 'Aungier Street'"<>
+          <iframe
+          width="200"
+          height="150"
+          frameborder="0"
+           scrolling="no"
+           marginheight="0"
+           marginwidth="0"
+           ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.33854,-6.26607&amp;output=embed">
+         </iframe></td>
+         <td ng-if="x.location == 'Kevin Street'"<>
+           <iframe
+           width="200"
+           height="150"
+           frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.337015,-6.267933&amp;output=embed">
+          </iframe></td>
+          <td ng-if="x.location == 'Bolton Street'"<>
             <iframe
-            width="240"
-            height="350"
+            width="200"
+            height="150"
             frameborder="0"
              scrolling="no"
              marginheight="0"
              marginwidth="0"
-             ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.33854,-6.26607&amp;output=embed">
+             ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.351406,-6.268724&amp;output=embed">
+           </iframe></td>
+          <td ng-if="x.location == 'Cathal Brugha Street'"<>
+            <iframe
+            width="200"
+            height="150"
+            frameborder="0"
+             scrolling="no"
+             marginheight="0"
+             marginwidth="0"
+             ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.352044,-6.259514&amp;output=embed">
            </iframe></td>
     </tr>
 </table>
