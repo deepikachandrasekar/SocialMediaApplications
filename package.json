@@ -8,11 +8,6 @@
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
     "mysql": "^2.17.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
     "async-waterfall": "^0.1.5",
     "concurrently": "^4.1.0",
     "mysql-import": "^2.0.2",
@@ -31,11 +26,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon app/index.js",
-    "first_deploy": " concurrently \"npm install\" \"node app/seed/index.js\"",
-    "start-app-first": "concurrently \"npm run first_deploy\" \"npm run server\" \"npm run client\"",
-    "start-app": "concurrently \"npm run server\" \"npm run client\""
+    "seed": "node app/seed/index.js",
+    "start": "node app/seed/index.js && npm run server"
   },
-  "proxy": "http://localhost:5000/api/",
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },
