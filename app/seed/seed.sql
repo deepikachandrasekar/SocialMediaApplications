@@ -145,5 +145,5 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` VALUES(123, 'Kermit Frog', 11101, AES_ENCRYPT('frog','key_tud_password_encrypt'),'kermit.frog@gmail.com','https://vignette.wikia.nocookie.net/p__/images/3/3c/Kermit_the_Frog.png/revision/latest?cb=20150102173217&path-prefix=protagonist');
-INSERT INTO `student` VALUES(124, 'Gonzo Great', 11102, AES_ENCRYPT('great','key_tud_password_encrypt'),'gonzo great@gmail.com','http://illuminarti.weebly.com/uploads/1/6/7/7/16779426/2469582_orig.jpg');
+INSERT INTO `student` VALUES(124, 'Gonzo Great', 11102, AES_ENCRYPT('great','key_tud_password_encrypt'),'gonzo.great@gmail.com','http://illuminarti.weebly.com/uploads/1/6/7/7/16779426/2469582_orig.jpg');
 INSERT INTO `student` VALUES(125, 'Cookie Monster', 11103, AES_ENCRYPT('monster','key_tud_password_encrypt'),'cookie.monster@gmail.com','https://cdn3.volusion.com/uuhbg.clmqc/v/vspfiles/photos/00029090-2.jpg?1522302835');
