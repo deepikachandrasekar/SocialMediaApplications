@@ -23,10 +23,6 @@
     "url": "git+https://github.com/dpikachan07/SocialMediaApplications.git"
   },
   "scripts": {
-    "client": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "server": "nodemon app/index.js",
     "seed": "node app/seed/index.js",
     "start": "node app/seed/index.js && npm run server"
