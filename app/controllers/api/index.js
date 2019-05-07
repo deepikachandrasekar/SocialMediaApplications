@@ -112,7 +112,7 @@ class Api {
     const controllerHelper = new ControllerHelper(res);
     try {
       var result = []
-      connection.query(`SELECT module_id,name,credits,website,due_date  FROM module WHERE  module.course_id like '%${req.body.courseId}%';`, function (error, results, fields) {
+      connection.query(`SELECT module_id,name,credits,website,due_date,location  FROM module WHERE  module.course_id like '%${req.body.courseId}%';`, function (error, results, fields) {
         if (error) console.log(error);
         if (results.length === 0) {
           controllerHelper.sendResponse({
@@ -128,7 +128,8 @@ class Api {
               name: value.name,
               credits: value.credits,
               website: value.website,
-              due_date: value.due_date
+              due_date: value.due_date,
+              location: value.location
             };
             result.push(tableVal);
             if (index === array.length - 1) {

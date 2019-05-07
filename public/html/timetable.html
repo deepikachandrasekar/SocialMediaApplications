@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+             <div class="modules-page">
+<h4> Timetable </h4>
+<div>
+<div class="ui-card">
+
+<!--User profile-->
+<div class="content">
+<a class="header"> Week : {{timetableData[0].week || 0}}</a>
+<div class="meta">
+</div>
+</div>
+</div>
+</div>
+<!--List of modules based on user profile-->
+<div class="modules-list">
+<table id="modules" align="center">
+    <tr>
+        <td>Module Name</td>
+        <td>Room</td>
+        <td>Day</td>
+        <td>Time</td>
+        <td>Location</td>
+        <td>Map</td>
+
+    </tr>
+    <tr ng-repeat="x in timetableData">
+        <td>{{x.name}}</td>
+        <td>{{x.room}}</td>
+        <td>{{x.day}}</td>
+        <td>{{x.time}}</td>
+        <td>{{x.location}}</td>
+        <!-- <td>{{x.location}}</td> -->
+
+          <td>
+            <iframe
+            width="240"
+            height="350"
+            frameborder="0"
+             scrolling="no"
+             marginheight="0"
+             marginwidth="0"
+             ng-src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=53.33854,-6.26607&amp;output=embed">
+           </iframe></td>
+    </tr>
+</table>
+</div>
+
+</div>
+
+</div>
+    </div>
+</div>

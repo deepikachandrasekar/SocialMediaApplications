@@ -1,57 +1,66 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : Apr 15, 2019, 11:55:49 AM
+
+/* 
+    Created on : Mar 26, 2019, 9:24:35 PM
     Author     : deepikachandrasekar
 */
-html , body {
-    height:100%;
-    width:100%;
+body{
+	margin:0;
+	
+	font:600 16px/18px 'Helvetica',sans-serif;
+}
+/*Styling of the navigation menu bar*/
+.navbar-inverse , .navbar-toggle {
+    color: #FFFFFF;
+    background-image: -webkit-linear-gradient(top, #004B6C 10%, #0395DA 90%);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-#landing-page{
-  background-image: linear-gradient(#004B6C,#00A9B6);
-  display: table;
-  height:100%;
-  position: relative;
-  width: 100%;
-  background-size: cover;
-}
-.landing-text{
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+.navbar-collapse a:active{
+    color: #00A9B6;
 }
 
-.landing-text h1{
-  font-size: 200%;
-  font-weight: 300%;
+.modules-page , .modules-list{
+    text-align: center;
 }
 
-/* Set a style for all buttons */
-.container button {
+#modules{
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+#modules  td, #modules th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+#modules tr:nth-child(even){background-color: #f2f2f2;}
+
+#modules tr:hover {background-color: #ddd;}
+
+#modules th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
   background-color: #4CAF50;
   color: white;
-  padding: 14px 20px;
-  margin: 20px 0;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  border-radius: 25px;
+}
+/*Styling of the image in the user profile page and the icon in the home page*/
+img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
 }
 
-
-@media screen and (max-width: 300px){
-  img.logo{
-    width: 80%;
-  }
+.logo{
+    width:100%;
+}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
 }
 
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
+.ui-card{
+    border: 1px solid #d3d3d3;
+    padding:10px;
 }
