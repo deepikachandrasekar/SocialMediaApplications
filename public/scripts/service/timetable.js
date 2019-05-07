@@ -5,7 +5,9 @@ angular.module('Timetable')
   .factory('TimetableService', ['Base64', '$http', '$cookieStore', '$rootScope', '$timeout',
     function (Base64, $http, $cookieStore, $rootScope, $timeout) {
       var service = {};
-
+        /** ******
+        Get all the timetable Service
+        ******* */
       service.getTimetable = function (courseId, callback) {
         $http({
             url: 'http://localhost:3000/api/timetable',
