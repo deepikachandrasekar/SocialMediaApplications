@@ -6,10 +6,10 @@ angular.module('Authentication')
     function (Base64, $http, $cookieStore, $rootScope, $timeout) {
       var service = {};
 
-      
-        /** ******
-        Login Service
-        ******* */
+
+      /** ******
+      Login Service
+      ******* */
       service.Login = function (email, password, callback) {
         $http({
             url: 'http://localhost:3000/api/login',
@@ -43,9 +43,9 @@ angular.module('Authentication')
               // failed
             });
       };
-        /** ******
-        Get pic during login Service
-        ******* */
+      /** ******
+      Get pic during login Service
+      ******* */
       service.GetPic = function (email, callback) {
         $http({
             url: 'http://localhost:3000/api/getpic',
@@ -74,9 +74,9 @@ angular.module('Authentication')
             });
       };
 
-        /** ******
-        Set credentials  in session  after a successful login
-        ******* */
+      /** ******
+      Set credentials  in session  after a successful login
+      ******* */
       service.SetCredentials = function (userData) {
         var authdata = Base64.encode(userData.email + ':' + userData.student_id);
 
@@ -94,7 +94,7 @@ angular.module('Authentication')
         $http.defaults.headers.common['Authorization'] = 'Basic ' + authdata; // jshint ignore:line
         $cookieStore.put('globals', $rootScope.globals);
       };
-         /** ******
+      /** ******
         Clear credentials in session after a successful logout
         ******* */
       service.ClearCredentials = function () {

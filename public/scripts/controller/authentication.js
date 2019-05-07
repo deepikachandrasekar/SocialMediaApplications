@@ -3,9 +3,9 @@ var app = angular.module("Authentication", []);
 app.controller('LoginController', ['$scope', '$rootScope', '$location', 'AuthenticationService',
   function ($scope, $rootScope, $location, AuthenticationService) {
     // reset login status
-        /** ******
-        Controller to call the check pic API
-        ******* */
+    /** ******
+    Controller to call the check pic API
+    ******* */
     $scope.checkPic = function (email) {
       AuthenticationService.GetPic(email, function (response) {
         if (response.success) {
@@ -14,10 +14,10 @@ app.controller('LoginController', ['$scope', '$rootScope', '$location', 'Authent
         }
       });
     }
-    
-        /** ******
-        Controller to call the Login API
-        ******* */
+
+    /** ******
+    Controller to call the Login API
+    ******* */
     $scope.login = function () {
       $scope.dataLoading = true;
       AuthenticationService.Login($scope.email, $scope.password, function (response) {
@@ -30,11 +30,11 @@ app.controller('LoginController', ['$scope', '$rootScope', '$location', 'Authent
         }
       });
     };
-    
-        /** ******
-        Controller to call the Logout API
-        ******* */    
-    
+
+    /** ******
+    Controller to call the Logout API
+    ******* */
+
     $scope.logout = function () {
       AuthenticationService.ClearCredentials();
     };

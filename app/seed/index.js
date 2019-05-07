@@ -31,13 +31,13 @@ Database  is dropped
   ******* */
   return connection.query('DROP DATABASE IF EXISTS deepika_college_data;');
 }).then(function () {
-    /** ******
+  /** ******
 Database  is created
   ******* */
   return connection.query('CREATE DATABASE  deepika_college_data;');
 }).then(function () {
   connection.end();
-    /** ******
+  /** ******
 Database  Dump is restored
   ******* */
   importer.import(__dirname + '/seed.sql').then(() => {

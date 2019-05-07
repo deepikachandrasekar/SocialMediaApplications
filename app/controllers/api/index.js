@@ -2,19 +2,19 @@ const ControllerHelper = require('../../common/controllerHelper');
 const mysql = require('mysql');
 const mysqlConfig = require('../../config.json').mysql;
 
-  /** ******
-  SQL Connection
-  ******* */
+/** ******
+SQL Connection
+******* */
 const connection = mysql.createConnection({
   host: mysqlConfig.host,
-  port:mysqlConfig.port,
+  port: mysqlConfig.port,
   user: mysqlConfig.username,
   password: mysqlConfig.password,
   database: mysqlConfig.database
 });
 
 class Api {
-   /** ******
+  /** ******
   Health Check API to test the API health
   GET Method
   ******* */
@@ -33,7 +33,7 @@ class Api {
       });
     }
   }
-   /** ******
+  /** ******
   Timetable API
   POST METHOD
   Request Body
@@ -79,7 +79,7 @@ class Api {
       });
     }
   }
- /** ******
+  /** ******
   Login API
   POST METHOD
   Request Body
@@ -175,14 +175,14 @@ class Api {
     }
   }
 
-/** ******
-  Modules API
-  POST METHOD
-  Request Body
-  {
-	"courseID":"123123"
-   }
-  ******* */
+  /** ******
+    Modules API
+    POST METHOD
+    Request Body
+    {
+  	"courseID":"123123"
+     }
+    ******* */
   static async modules(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {

@@ -5,9 +5,9 @@ angular.module('Mycourse')
   .factory('MycourseService', ['Base64', '$http', '$cookieStore', '$rootScope', '$timeout',
     function (Base64, $http, $cookieStore, $rootScope, $timeout) {
       var service = {};
-        /** ******
-        Get all the modules Service
-        ******* */
+      /** ******
+      Get all the modules Service
+      ******* */
       service.getModule = function (courseId, callback) {
         $http({
             url: 'http://localhost:3000/api/modules',

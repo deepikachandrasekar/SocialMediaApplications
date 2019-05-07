@@ -1,6 +1,6 @@
 'use strict';
 
- /** ******
+/** ******
 Declaring all modules
   ******* */
 
@@ -9,7 +9,7 @@ angular.module('Home', []);
 angular.module('Mycourse', []);
 angular.module('Timetable', []);
 
- /** ******
+/** ******
 Master Module
 ******* */
 
@@ -23,9 +23,9 @@ angular.module('deepika-app', [
   ])
 
   .config(['$routeProvider', function ($routeProvider) {
-/** ******
-Configuring the Route
-******* */
+    /** ******
+    Configuring the Route
+    ******* */
     $routeProvider
       .when('/login', {
         controller: 'LoginController',
@@ -56,9 +56,9 @@ Configuring the Route
       if ($rootScope.globals.currentUser) {
         $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
       }
-/** ******
-Used to route during the login and logout scenario
-******* */
+      /** ******
+      Used to route during the login and logout scenario
+      ******* */
       $rootScope.$on('$locationChangeStart', function (event, next, current) {
         // redirect to login page if not logged in
         if ($location.path() !== '/login' && !$rootScope.globals.currentUser) {
