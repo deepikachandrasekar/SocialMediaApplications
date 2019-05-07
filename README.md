@@ -8,7 +8,6 @@ Node v8.9.3 or higher
 MySQL Database installed
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
