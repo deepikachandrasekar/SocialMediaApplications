@@ -1,11 +1,12 @@
 const Base = require('./base');
 const ApiRouter = require('./api');
-
+/** ******
+  Base Route Class
+  ******* */
 
 class Routes extends Base {
   constructor() {
     super();
-    // this.get('/', (req, res) => res.send("hi"));
     this.use('/', new ApiRouter());
   }
 }
