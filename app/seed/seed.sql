@@ -1,20 +1,12 @@
--- phpMyAdmin SQL Dump
--- version 3.3.9.2
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Mar 13, 2013 at 04:40 PM
--- Server version: 5.5.9
--- PHP Version: 5.3.6
 
 --
--- Database: `collegeData`
+-- Database: `deepika_college_data`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lecturerTable`
+-- Table structure for table `lecturer`
 --
 
 CREATE TABLE `lecturer` (
@@ -27,7 +19,7 @@ CREATE TABLE `lecturer` (
 );
 
 --
--- Dumping data for table `lecturerTable`
+-- Dumping data for table `lecturer`
 --
 
 INSERT INTO `lecturer` VALUES(123001, 'Charlie Cullen', '11101,11102', 'charlie@here.com','inactive');
@@ -39,7 +31,7 @@ INSERT INTO `lecturer` VALUES(123005, 'James Wogan', '11102,11103', 'james@there
 -- --------------------------------------------------------
 
 --
--- Table structure for table `moduleTable`
+-- Table structure for table `module`
 --
 
 CREATE TABLE `module` (
@@ -57,7 +49,7 @@ CREATE TABLE `module` (
 );
 
 --
--- Dumping data for table `moduleTable`
+-- Dumping data for table `module`
 --
 
 INSERT INTO `module` VALUES(999001, 'Dynamic Web Development','11101,11102', 15, 'www.dynWeb.ie', '2019-05-14' ,'Aungier Street', '4037', '53.338545', '-6.26607');
@@ -75,7 +67,7 @@ INSERT INTO `module` VALUES(999010, 'Production Skills','11101,11102', 10, 'www.
 
 
 --
--- Table structure for table `moduleTable`
+-- Table structure for table `course`
 --
 
 CREATE TABLE `course` (
@@ -85,7 +77,7 @@ CREATE TABLE `course` (
 );
 
 --
--- Dumping data for table `moduleTable`
+-- Dumping data for table `course`
 --
 
 INSERT INTO `course` VALUES(11101, 'MSc Cloud computing');
@@ -95,7 +87,7 @@ INSERT INTO `course` VALUES(11103, 'MSc Data analytics');
 -- --------------------------------------------------------
 
 --
--- Table structure for table `moduleTable`
+-- Table structure for table `time_table`
 --
 
 CREATE TABLE `time_table` (
@@ -108,7 +100,7 @@ CREATE TABLE `time_table` (
 );
 
 --
--- Dumping data for table `moduleTable`
+-- Dumping data for table `time_table`
 --
 
 INSERT INTO `time_table` VALUES(1, '1,3,5,6,7,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52','Monday', '2:00 pm', 999001);
@@ -127,7 +119,7 @@ INSERT INTO `time_table` VALUES(10, '1,3,5,6,7,9,10,11,12,13,14,15,16,17,18,19,2
 
 
 --
--- Table structure for table `studentTable`
+-- Table structure for table `student`
 --
 
 CREATE TABLE `student` (
@@ -141,7 +133,7 @@ CREATE TABLE `student` (
 );
 
 --
--- Dumping data for table `studentTable`
+-- Dumping data for table `student`
 --
 
 INSERT INTO `student` VALUES(123, 'Kermit Frog', 11101, AES_ENCRYPT('frog','key_tud_password_encrypt'),'kermit.frog@gmail.com','https://vignette.wikia.nocookie.net/p__/images/3/3c/Kermit_the_Frog.png/revision/latest?cb=20150102173217&path-prefix=protagonist');

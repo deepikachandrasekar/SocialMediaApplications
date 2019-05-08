@@ -1,9 +1,5 @@
 'use strict';
 
-angular.module('Home',[])
+angular.module('Home', [])
 
-.controller('HomeController',
-    ['$scope',
-    function ($scope) {
-
-    }]);
+  .controller('HomeController', ['$scope', '$window', '$route', '$rootScope', function ($scope, $window, $route) {}]);

@@ -2,15 +2,22 @@ const ControllerHelper = require('../../common/controllerHelper');
 const mysql = require('mysql');
 const mysqlConfig = require('../../config.json').mysql;
 
+/** ******
+SQL Connection
+******* */
 const connection = mysql.createConnection({
   host: mysqlConfig.host,
-  port:mysqlConfig.port,
+  port: mysqlConfig.port,
   user: mysqlConfig.username,
   password: mysqlConfig.password,
   database: mysqlConfig.database
 });
 
 class Api {
+  /** ******
+  Health Check API to test the API health
+  GET Method
+  ******* */
   static async healthCheck(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {
@@ -26,6 +33,14 @@ class Api {
       });
     }
   }
+  /** ******
+  Timetable API
+  POST METHOD
+  Request Body
+  {
+	"courseId":"11101"
+   }
+  ******* */
   static async timetable(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {
@@ -64,7 +79,15 @@ class Api {
       });
     }
   }
-
+  /** ******
+  Login API
+  POST METHOD
+  Request Body
+  {
+	"email":"test@email",
+  "password":"123"
+   }
+  ******* */
   static async login(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {
@@ -106,7 +129,14 @@ class Api {
       });
     }
   }
-
+  /** ******
+  To get profile picture during the login page  API
+  POST METHOD
+  Request Body
+  {
+	"email":"test@email"
+   }
+  ******* */
   static async getPic(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {
@@ -145,7 +175,14 @@ class Api {
     }
   }
 
-
+  /** ******
+    Modules API
+    POST METHOD
+    Request Body
+    {
+  	"courseID":"123123"
+     }
+    ******* */
   static async modules(req, res) {
     const controllerHelper = new ControllerHelper(res);
     try {
