@@ -24,6 +24,7 @@ app.controller('LoginController', ['$scope', '$rootScope', '$location', 'Authent
         if (response.success) {
           AuthenticationService.SetCredentials(response.success);
           $location.path('/');
+          document.location.reload(true);
         } else {
           $scope.error = response.message;
           $scope.dataLoading = false;
