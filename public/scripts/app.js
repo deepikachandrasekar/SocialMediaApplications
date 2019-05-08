@@ -22,10 +22,11 @@ angular.module('deepika-app', [
     'ngCookies'
   ])
 
-  .config(['$routeProvider', function ($routeProvider) {
+  .config(['$routeProvider', function ($routeProvider, $routeChangeSuccess, $scope, $on) {
     /** ******
     Configuring the Route
     ******* */
+
     $routeProvider
       .when('/login', {
         controller: 'LoginController',
