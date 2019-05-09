@@ -1,3 +1,8 @@
+## Description
+
+The Grange Mobile app is a responsive app made for students from TU Dublin to check out their courses, modules and timetable for their on-going semester.  
+
+
 
 ## Pre requisities
 
